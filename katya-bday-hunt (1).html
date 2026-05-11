@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#2d4a31" />
+  <meta name="description" content="Scavenger hunt photo prompts for Katya's birthday weekend in Maine." />
+  <title>Katya's Birthday Weekend · The Hunt</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --green: #2d4a31; --cream: #f5f1ea; --ink: #1a1a18; --muted: #6b6b64; --border: rgba(45,74,49,0.18); --accent: #c9b97a; }
+    html { font-size: 16px; }
+    body { background: var(--cream); color: var(--ink); font-family: 'EB Garamond', Georgia, serif; font-size: 1.1rem; line-height: 1.7; min-height: 100vh; }
+    header { background: var(--green); color: var(--cream); padding: 3rem 2rem 2.5rem; text-align: center; }
+    .header-eyebrow { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.7; margin-bottom: 1rem; }
+    header h1 { font-family: 'EB Garamond', Georgia, serif; font-size: clamp(2rem, 6vw, 3.2rem); font-weight: 400; line-height: 1.15; margin-bottom: 0.5rem; }
+    header h1 em { font-style: italic; opacity: 0.85; }
+    .header-sub { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.6; margin-top: 1rem; }
+    .header-nav { margin-top: 1.5rem; }
+    .header-nav a { font-family: 'Lato', sans-serif; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--cream); opacity: 0.7; text-decoration: none; border: 1px solid rgba(245,241,234,0.3); border-radius: 2rem; padding: 0.3rem 1rem; transition: opacity 0.15s; }
+    .header-nav a:hover { opacity: 1; }
+    main { max-width: 680px; margin: 0 auto; padding: 3rem 2rem 6rem; }
+    .section-eyebrow { font-family: 'Lato', sans-serif; font-weight: 400; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--green); margin-bottom: 0.75rem; }
+    h2 { font-family: 'EB Garamond', Georgia, serif; font-size: 1.9rem; font-weight: 400; color: var(--green); line-height: 1.2; margin-bottom: 0.5rem; }
+    .photo-rule { display: flex; align-items: baseline; gap: 1.25rem; background: var(--green); color: var(--cream); border-radius: 4px; padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
+    .photo-rule-num { font-family: 'EB Garamond', Georgia, serif; font-size: 2rem; font-weight: 400; color: var(--accent); white-space: nowrap; line-height: 1; }
+    .photo-rule-text { font-size: 0.95rem; line-height: 1.55; color: rgba(245,241,234,0.88); margin: 0; }
+    .hunt-list { list-style: none; }
+    .hunt-item { display: grid; grid-template-columns: 2.5rem 1fr; gap: 0 1.25rem; padding: 1.5rem 0; border-bottom: 1px solid var(--border); align-items: start; }
+    .hunt-item:first-child { border-top: 1px solid var(--border); }
+    .hunt-num { font-family: 'Lato', sans-serif; font-weight: 300; font-size: 0.75rem; color: var(--accent); padding-top: 0.35rem; letter-spacing: 0.05em; }
+    .hunt-label { font-family: 'Lato', sans-serif; font-size: 0.7rem; font-weight: 400; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.3rem; }
+    .hunt-prompt { font-size: 1.1rem; color: var(--ink); margin-bottom: 0.35rem; line-height: 1.55; }
+    .hunt-hint { font-size: 0.9rem; color: var(--muted); font-style: italic; line-height: 1.5; }
+    .hunt-tag { display: inline-block; font-family: 'Lato', sans-serif; font-size: 0.65rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: var(--green); border: 1px solid var(--border); border-radius: 2rem; padding: 0.2rem 0.7rem; margin-top: 0.6rem; }
+    .bonus-block { background: var(--green); color: var(--cream); border-radius: 4px; padding: 1.75rem 2rem; margin-top: 2.5rem; }
+    .bonus-block h3 { font-family: 'EB Garamond', Georgia, serif; font-size: 1.4rem; font-weight: 400; margin-bottom: 1rem; color: var(--cream); }
+    .bonus-list { list-style: none; }
+    .bonus-list li { display: flex; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.12); font-size: 1rem; line-height: 1.5; color: rgba(245,241,234,0.88); }
+    .bonus-list li:last-child { border-bottom: none; }
+    .bonus-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 0.55rem; }
+    footer { text-align: center; padding: 2rem; font-family: 'Lato', sans-serif; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--border); }
+    footer a { color: var(--green); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <p class="header-eyebrow">Maine · May 2026</p>
+  <h1>Katya's Birthday<br><em>Scavenger Hunt</em></h1>
+  <p class="header-sub">Photo prompts for the weekend</p>
+  <div class="header-nav"><a href="katya-bday-packlist.html">Pack list →</a></div>
+</header>
+
+<main>
+  <p class="section-eyebrow">The hunt</p>
+  <h2>Photo prompts</h2>
+  <div class="photo-rule">
+    <span class="photo-rule-num">10 – 13</span>
+    <p class="photo-rule-text">photos across the whole weekend. One per prompt, plus candids, blurry ones, weird ones — all of it counts. 13 is the number of the day, so shoot for it.</p>
+  </div>
+
+  <ul class="hunt-list">
+    <li class="hunt-item">
+      <span class="hunt-num">01</span>
+      <div class="hunt-body">
+        <p class="hunt-label">Joint in a hot tub</p>
+        <p class="hunt-prompt">Katya in the hot tub, joint in hand, steam rising off the water. That's it. That's the prompt.</p>
+        <p class="hunt-hint">Capture the unbothered energy. She's earned it.</p>
+        <span class="hunt-tag">Friday night</span>
+      </div>
+    </li>
+    <li class="hunt-item">
+      <span class="hunt-num">02</span>
+      <div class="hunt-body">
+        <p class="hunt-label">Any meal</p>
+        <p class="hunt-prompt">Get a shot of the table before anyone digs in — the whole spread, the faces, the anticipation. Or just the most beautiful thing on your plate.</p>
+        <p class="hunt-hint">Any meal, any day. Thai night is a strong contender.</p>
+        <span class="hunt-tag">Any meal</span>
+      </div>
+    </li>
+    <li class="hunt-item">
+      <span class="hunt-num">03</span>
+      <div class="hunt-body">
+        <p class="hunt-label">The candy salad</p>
+        <p class="hunt-prompt">Document the chaotic glory of everyone's gummies combined into one bowl. Get in close. Let it be a little unhinged.</p>
+        <p class="hunt-hint">The full bowl, or a single perfect gummy held up to the light.</p>
+        <span class="hunt-tag">Friday dessert</span>
+      </div>
+    </li>
+    <li class="hunt-item">
+      <span class="hunt-num">04</span>
+      <div class="hunt-body">
+        <p class="hunt-label">Take a scenic drive</p>
+        <p class="hunt-prompt">Shoot through the window — blurry trees, open road, the horizon doing its thing. Movement is the point.</p>
+        <p class="hunt-hint">Don't wait for a perfect view. The imperfect one is better.</p>
+        <span class="hunt-tag">Saturday drive</span>
+      </div>
+    </li>
+    <li class="hunt-item">
+      <span class="hunt-num">05</span>
+      <div class="hunt-body">
+        <p class="hunt-label">A beach find — sea glass, shell, or pottery</p>
+        <p class="hunt-prompt">Lay your find on the sand or hold it open in your palm, up close.</p>
+        <p class="hunt-hint">Pottery shard = jackpot. A plain rock you love = equally valid.</p>
+        <span class="hunt-tag">Beach walk</span>
+      </div>
+    </li>
+    <li class="hunt-item">
+      <span class="hunt-num">06</span>
+      <div class="hunt-body">
+        <p class="hunt-label">A fun drink</p>
+        <p class="hunt-prompt">Coffee, wine, cocktail — photograph it like it's the star of its own little story. Condensation, steam, a good garnish.</p>
+        <p class="hunt-hint">Any time, any day. Don't overthink it.</p>
+        <span class="hunt-tag">Any time</span>
+      </div>
+    </li>
+    <li class="hunt-item">
+      <span class="hunt-num">07</span>
+      <div class="hunt-body">
+        <p class="hunt-label">A thrift or trinket that speaks to you</p>
+        <p class="hunt-prompt">Find something that fits in your palm anywhere in Portland — a shop, a market, a stoop sale — and photograph it like it's precious. Because it is now.</p>
+        <p class="hunt-hint">Hold it up, lay it in light, or tuck it into your journal later.</p>
+        <span class="hunt-tag">Anywhere in Portland</span>
+      </div>
+    </li>
+    <li class="hunt-item">
+      <span class="hunt-num">08</span>
+      <div class="hunt-body">
+        <p class="hunt-label">An ice cream cone</p>
+        <p class="hunt-prompt">The cone, the scoop, the sky behind it. Or someone mid-lick if they'll let you.</p>
+        <p class="hunt-hint">Maine in May means you've earned it.</p>
+        <span class="hunt-tag">Saturday treat</span>
+      </div>
+    </li>
+    <li class="hunt-item">
+      <span class="hunt-num">09</span>
+      <div class="hunt-body">
+        <p class="hunt-label">A flower</p>
+        <p class="hunt-prompt">Find a flower — growing wild, fallen on pavement, tucked into a window box or a fence — and photograph it like it deserves to be remembered.</p>
+        <p class="hunt-hint">In May in Maine, you won't have to look far.</p>
+        <span class="hunt-tag">Anywhere</span>
+      </div>
+    </li>
+    <li class="hunt-item">
+      <span class="hunt-num">10</span>
+      <div class="hunt-body">
+        <p class="hunt-label">The junk journal spread</p>
+        <p class="hunt-prompt">Photograph your ephemera laid out flat before it gets glued down — your little archive. Then shoot your finished page.</p>
+        <p class="hunt-hint">Two moments of the same prompt: before and after.</p>
+        <span class="hunt-tag">Saturday night</span>
+      </div>
+    </li>
+  </ul>
+
+  <div class="bonus-block">
+    <h3>Bonus challenges</h3>
+    <ul class="bonus-list">
+      <li><span class="bonus-dot"></span><span><strong>The green shot</strong> — find something fully, gloriously green and make it your whole frame. Pine bough, painted wall, a sweater. Anything.</span></li>
+      <li><span class="bonus-dot"></span><span><strong>The unexpected one</strong> — take one photo of something nobody planned, that you'll all remember anyway.</span></li>
+      <li><span class="bonus-dot"></span><span><strong>A group shot</strong> — everyone in frame, however you can manage it. Messy, mid-laugh, slightly chaotic. The one you'll actually want to keep.</span></li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  Katya's Birthday Weekend · Maine · May 2026 · <a href="katya-bday-packlist.html">Pack list →</a>
+</footer>
+
+</body>
+</html>
